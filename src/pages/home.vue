@@ -48,17 +48,51 @@
         class="gallery border order-1 sm:order-2 col-span-full sm:col-span-1 sm:rotate-5 md:rotate-12 lg:rotate-20 sm:-translate-x-5 lg:-translate-x-8 justify-end"
       >
         <div
-          class="border-2 border-red-400 relative row-start-1 row-end-3 col-start-2 col-end-3"
-          v-for="i in 1"
-          :key="i"
+          class="relative row-start-3 row-end-5 col-start-1 col-end-3 rotate-330"
         >
+          <img
+            :src="getStaticImg('illustration.png')"
+            alt="illustration"
+            class="w-full h-full"
+          />
+        </div>
+
+        <div
+          class="relative row-start-1 row-end-3 col-start-1 col-end-3 rotate-330"
+        >
+          <img
+            :src="getStaticImg('camera.png')"
+            alt="wowan"
+            class="w-full h-full"
+          />
+        </div>
+
+        <div class="relative row-start-1 row-end-3 col-start-3 col-end-6">
           <img
             :src="getStaticImg('woman.png')"
             alt="wowan"
             class="w-full h-full"
           />
         </div>
-        <div v-for="i in 15" :key="i" class="border h-full w-full"></div>
+
+        <div class="relative row-start-4 row-end-6 col-start-3 col-end-5">
+          <img
+            :src="getStaticImg('woman.png')"
+            alt="wowan"
+            class="w-full h-full"
+          />
+        </div>
+
+        <div
+          class="relative row-start-3 row-end-4 col-start-4 col-end-6 rotate-330"
+        >
+          <img
+            :src="getStaticImg('gas-baloon.png')"
+            alt="wowan"
+            class="w-full h-full"
+          />
+        </div>
+        <div v-for="i in 5" :key="i" class="border border-gray-300"></div>
       </div>
     </section>
 
@@ -679,8 +713,8 @@ export default {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 80px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 80px);
   width: 100%;
   margin: auto;
 }
@@ -691,7 +725,7 @@ export default {
 
 @media screen and (min-width: 640px) {
   .gallery {
-    grid-template-rows: repeat(4, 80px);
+    grid-template-rows: repeat(5, 80px);
     max-width: 280px;
     margin-left: auto;
   }
@@ -704,7 +738,7 @@ export default {
 
 @media screen and (min-width: 768px) {
   .gallery {
-    grid-template-rows: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
     max-width: 370px;
   }
 

@@ -16,6 +16,7 @@ module.exports = {
                 20: "20deg",
                 10: "10deg",
                 5: "5deg",
+                330: "330deg",
             },
 
             borderWidth: {
